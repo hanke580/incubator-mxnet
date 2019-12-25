@@ -1299,6 +1299,11 @@ def _add_workload_resize():
     OpArgMngr.add_workload('resize', np.zeros((10, 0)), (0, 10))
     OpArgMngr.add_workload('resize', np.zeros((10, 0)), (0, 100))
 
+def _add_workload_kron():
+    OpArgMngr.add_workload('kron', np.ones((5)), np.ones((2)))
+    OpArgMngr.add_workload('kron', np.arange(16).reshape((4,4)), np.ones((4,4)))
+    OpArgMngr.add_workload('kron', np.ones((2,4)), np.zeros((2,4)))
+    OpArgMngr.add_workload('kron', np.ones(()), np.ones(()))
 
 @use_np
 def _prepare_workloads():
@@ -1420,7 +1425,7 @@ def _prepare_workloads():
     _add_workload_shape()
     _add_workload_diff()
     _add_workload_resize()
-
+    _add_workload_kron()
 
 _prepare_workloads()
 
