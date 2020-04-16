@@ -32,6 +32,7 @@ __all__ = [
     'argwhere',
     'array_equal',
     'array_equiv',
+    'broadcast',
     'choose',
     'compress',
     'corrcoef',
@@ -119,6 +120,7 @@ argpartition = onp.argpartition
 argwhere = onp.argwhere
 array_equal = onp.array_equal
 array_equiv = onp.array_equiv
+broadcast = onp.broadcast
 choose = onp.choose
 compress = onp.compress
 corrcoef = onp.corrcoef

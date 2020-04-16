@@ -3161,7 +3161,7 @@ def check_interoperability(op_list):
         if name in _TVM_OPS and not is_op_runnable():
             continue
         if name in ['shares_memory', 'may_share_memory', 'empty_like',
-                    '__version__', 'dtype', '_NoValue', 'flatiter']:  # skip list
+                    '__version__', 'dtype', '_NoValue', 'flatiter', 'broadcast']:  # skip list
             continue
         if name in ['full_like', 'zeros_like', 'ones_like'] and \
                 StrictVersion(platform.python_version()) < StrictVersion('3.0.0'):
